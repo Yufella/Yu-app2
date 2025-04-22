@@ -1,0 +1,23 @@
+
+body {
+    font-family: sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 20px;
+}
+h1 {
+    color: #6a0dad;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    margin-bottom: 10px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+input[type="checkbox"] {
+    margin-right: 10px;
+}

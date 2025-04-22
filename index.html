@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <title>Rotina do Yu</title>
+</head>
+<body>
+    <h1>Rotina do Yu</h1>
+    <ul id="taskList">
+        <li><input type="checkbox" onchange="removeTask(this)"> 07:00 – Despertar</li>
+        <li><input type="checkbox" onchange="removeTask(this)"> 07:05–07:15 – Alongamento + calçar tênis</li>
+        <li><input type="checkbox" onchange="removeTask(this)"> 07:20–07:45 – Corrida leve (5–8 km)</li>
+        <li><input type="checkbox" onchange="removeTask(this)"> 07:45–09:00 – Café da manhã</li>
+        <li><input type="checkbox" onchange="removeTask(this)"> 09:15–09:45 – Banho + meditação</li>
+        <li><input type="checkbox" onchange="removeTask(this)"> 10:00–13:00 – Trabalho / estudos</li>
+        <li><input type="checkbox" onchange="removeTask(this)"> 13:30–15:00 – Tarefas de média prioridade</li>
+        <li><input type="checkbox" onchange="removeTask(this)"> 15:00–15:15 – Café da tarde</li>
+        <li><input type="checkbox" onchange="removeTask(this)"> 17:15–19:00 – Tarefas de alta prioridade</li>
+        <li><input type="checkbox" onchange="removeTask(this)"> 18:00–19:00 – Treino</li>
+        <li><input type="checkbox" onchange="removeTask(this)"> 19:00–20:20 – Pós‑treino + hidratação</li>
+        <li><input type="checkbox" onchange="removeTask(this)"> 20:30–21:00 – Jantar leve</li>
+        <li><input type="checkbox" onchange="removeTask(this)"> 20:00–22:00 – Tempo livre</li>
+        <li><input type="checkbox" onchange="removeTask(this)"> 22:00 – Preparar para dormir</li>
+        <li><input type="checkbox" onchange="removeTask(this)"> 23:30 – Sono</li>
+    </ul>
+    <script>
+        function removeTask(checkbox) {
+            if (checkbox.checked) {
+                checkbox.parentElement.remove();
+            }
+        }
+
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js');
+        }
+    </script>
+</body>
+</html>
